@@ -1,0 +1,28 @@
+<!-- 3.Write a JavaScript code to multiply each number in the array by 10 and return the result using the map() function with arrow notation. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x10</title>
+</head>
+<body>
+    <script>
+
+        const numbers=[];
+        var size=(Number(prompt("Enter the size if array")));
+        for(var i=0;i<size;i++)
+        {
+            numbers[i]=(Number(prompt("Enter the element"+(i+1))));
+        }
+        const myFunction=(n) =>{
+            return n * 10;
+        }
+        const newarr = numbers.map(myFunction);
+        document.write(newarr);
+
+    </script>
+</body>
+</html>
