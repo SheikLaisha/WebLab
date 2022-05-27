@@ -12,19 +12,25 @@
 </head>
 <body>
     <script>
-       const array=[];
-       var size=prompt("Enter the number of samples");
-       for(let i=0;i<size;i++)
-       {
-           array[i]=prompt("Enter the sample "+(i+1));
-       }
-           for(let i=0;i< size;i++){
-               if(array[i] == 'v')
-               document.write("Positive &nbsp");
-               else
-               document.write("Negative &nbsp");
-           }
-        
+        var v=prompt("Enter virus composition");
+        var b=prompt("Enter blood composition");
+        var i=0,j=0;
+        var count=0;
+        while(i<v.length && j<b.length)
+        {
+            if(v[i]==b[j])
+            {
+                i++;
+                j++;
+                count++;
+            }
+            else
+            i++;
+        }
+        if(count==b.length)
+           document.write("Positive");
+        else
+          document.write("Negative");   
     </script>
 </body>
 </html>
