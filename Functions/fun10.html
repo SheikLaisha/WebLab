@@ -1,3 +1,6 @@
+<!-- 10.Write a JavaScript code to perform Jump Search for a given key and report success or failure. 
+Prompt the user to enter the key and a list of numbers -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +37,6 @@
         let x = prompt("Enter the key:");
         let n = arr.length;
         let index = jumpSearch(arr, x, n);
-        // document.write(`Number ${x} is at index ${index}`);
         if(index>=0 && index<=n)
         document.write("Success");
         else
