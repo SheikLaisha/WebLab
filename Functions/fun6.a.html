@@ -10,20 +10,32 @@
 </head>
 <body>
     <script>
-
-    function uppercase(str)
+            
+    function upper(str)
     {
-        var array1 = str.split(' ');
-        var newarray1 = [];
-        for(var x = 0; x < array1.length; x++){
-        newarray1.push(array1[x].charAt(0).toUpperCase()+array1[x].slice(1));
+        var p = str.split(' ');
+        var q = [];
+        for(var i=0; i < p.length; i++)
+        {
+            q.push(p[i].charAt(0).toUpperCase()+p[i].slice(1));
+        }
+        return q.join(' ');
     }
-    return newarray1.join(' ');
-    }
-    var a=prompt("Enter the text to convert first letter to uppercase:");
-    document.write(uppercase(a));
+    var a=prompt("enter text");
+    document.write(upper(a));
 
 
+    // function upper(str)
+    // {
+    //     var p = str.split(' ');
+    //     var q = [];
+    //     for(var x = 0; x < p.length; x++){
+    //     q.push(p[x].charAt(0).toUpperCase()+p[x].slice(1));
+    // }
+    // return q.join(' ');
+    // }
+    // var a=prompt("Enter the text to convert first letter to uppercase:");
+    // document.write(upper(a));
     </script>
 </body>
 </html>

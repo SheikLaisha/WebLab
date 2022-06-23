@@ -1,6 +1,8 @@
 <!-- 10.Write a JavaScript code to perform Jump Search for a given key and report success or failure. 
 Prompt the user to enter the key and a list of numbers -->
 
+<!-- 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,27 +15,33 @@ Prompt the user to enter the key and a list of numbers -->
      <script>
         function jumpSearch(arr, x, n)
         {  
-            let step = Math.sqrt(n);
-            let prev = 0;
-            while (arr[Math.min(step, n)-1] < x)
+            let p = Math.sqrt(n);
+            let q = 0;
+            while (arr[Math.min(p, n)-1] < x)
             {
-                prev = step;
-                step += Math.sqrt(n);
-                if (prev >= n)
+                q = p;
+                p = p+Math.sqrt(n);
+                if (q >= n)
                     return -1;
             }
-            while (arr[prev] < x)
+            while (arr[q] < x)
             {
-                prev++;
-                if (prev == Math.min(step, n))
+                q++;
+                if (q == Math.min(p, n))
                     return -1;
             }
-            if (arr[prev] == x)
-                return prev;
+            if (arr[q] == x)
+                return q;
             return -1;
         }
-        let arr = [0, 1, 1, 2, 3, 5, 8, 13, 21,
-                34, 55, 89, 144, 233, 377, 610];
+        var arr=[];
+        var size=prompt("enter size");
+        for(var i=0;i<size;i++)
+        {
+            arr[i]=prompt("enter elements");
+        }
+        // let arr = [0, 1, 1, 2, 3, 5, 8, 13, 21,
+        //         34, 55, 89, 144, 233, 377, 610];
         let x = prompt("Enter the key:");
         let n = arr.length;
         let index = jumpSearch(arr, x, n);
@@ -44,4 +52,54 @@ Prompt the user to enter the key and a list of numbers -->
         </script>
         
 </body>
-</html>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function jump(a,x,n)
+        {
+            let p=Math.sqrt(n);
+            let q=0;
+            while(a[Math.min(p,n)-1] < x)
+            {
+                q = p;
+                p=p+Math.sqrt(n);
+                if(q >= n)
+                return -1;
+            }
+            while(a[q] < x)
+            {
+                q++;
+                if(q==Math.min(p,n))
+                return -1;
+            }
+            if(a[q] == x)
+        
+                return q;
+            
+            return -1;
+        }
+        var a=[];
+        var size=prompt("enter size");
+        for(var i=0;i<size;i++){
+            a[i]=prompt("enter elements:");
+        }
+        let x=prompt("enter the key");
+        let n=a.length;
+        let index=jump(a,x,n);
+        if(index>=0 && index<=n)
+        document.write("success");
+        else
+        document.write("failure");
+    </script>
+</body>
+</html> 

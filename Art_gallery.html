@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+     <link herf="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap">
+     <link rel="stylesheet" type="text/css" href="style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+
+
+</head>
+
+<style>
+    body {
+      background-image: url('https://images.unsplash.com/photo-1614850523060-8da1d56ae167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    }
+    </style>
+
+<!-- <body background = "https://unsplash.com/s/photos/colorful-background"> -->
+     <!---NAVIGATION BAR--->
+
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+            <ul class="navbar-nav">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="webpage.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section1">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#section2">CONTACT US</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="committee.html">COMMITTEE</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><hr>
+      <h1 align="center" style="font-size:50px" >ART GALLERY</h1>
+      <hr><br>
+      <!-- <p style="background-image:url('https://unsplash.com/s/photos/colorful-background');">
+    <br> -->
+    <center>
+      <!-- CAROSOUL -->
+      <div class="slideshow-container">
+
+        <div class="mySlides">
+          <!-- <div class="numbertext">1 / 3</div> -->
+          <img src="https://media.istockphoto.com/photos/used-brushes-on-an-artists-palette-of-colorful-oil-paint-picture-id636761588?k=20&m=636761588&s=612x612&w=0&h=ew-Gc9JIh5PGLbxaW21a0Y4D_w7d1zsngEPX74e5HDs=" style="width:50%">
+          <div class="text">Come join us...</div>
+        </div>
+        
+        <div class="mySlides ">
+          <!-- <div class="numbertext">2 / 3</div> -->
+          <img src="https://media.istockphoto.com/photos/vintage-stylized-photo-of-paintbrushes-closeup-and-artist-palett-picture-id577949148?k=20&m=577949148&s=612x612&w=0&h=iukaE3sYvHROgJcNM6VumPkZkJw1U5B48FSiG9o7KrE=" style="width:50%">
+          <div class="text">Make your hands dirty...</div>
+        </div>
+        
+        <div class="mySlides ">
+          <!-- <div class="numbertext">3 / 3</div> -->
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTst0PChA1x_mK9TrBn2RhwD2DAkUGiKjpVtQ&usqp=CAU" style="width:50%">
+          <div class="text">& make your life colourfull</div>
+        </div>
+        
+        </div>
+    </center>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+    
+
+        <script >
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
+            </script>
+    <!-- <center><img src="https://media.istockphoto.com/photos/used-brushes-on-an-artists-palette-of-colorful-oil-paint-picture-id636761588?k=20&m=636761588&s=612x612&w=0&h=ew-Gc9JIh5PGLbxaW21a0Y4D_w7d1zsngEPX74e5HDs=" style="width:50%">
+    <img src="https://media.istockphoto.com/photos/vintage-stylized-photo-of-paintbrushes-closeup-and-artist-palett-picture-id577949148?k=20&m=577949148&s=612x612&w=0&h=iukaE3sYvHROgJcNM6VumPkZkJw1U5B48FSiG9o7KrE=" style="width:50%">
+    </center> -->
+
+
+<!-- ABOUT US -->
+
+    <h2 id = section1 style="font-family:Trebuchet MS;"> &nbsp&nbsp&nbsp  <strong>ABOUT US</strong></h2>
+    <div class="box"> 
+    <h6 style="margin-left: 2.5em;padding: 0 7em 2em 0;border-width: 2px; border-color: black;"> <br>The club organises various activities and workshops under experienced trainers. There is no limitation to only technical activities but also we organise intra and inter level competition.
+        Visit to an art gallery expands the understanding of the course doled out content and also uplifts particular premium et cetera, which in many people will potentiate the continuation of the course no sweat. This also helps us in knowing the art culture very well that is being thrived in to the society. Thus the visit to the art gallery brings out the best of the experience for anyone who has interest in art.<br>
+        Most importantly, the outing was fun because it provided for me a chance to visit a spot I have not been in the recent past, and laid open me to numerous unbelievable works of arts by diverse respectable artists. I additionally had an opportunity to meet a few experts in the art field who can make life less demanding for anyone in an exhibition hall environment.
+
+        Additionally, the systematic plan of the centerpieces and their depictions help in understanding the individual art functions as well as help in better understanding of the art thankfulness content because both are organized and clarified in the same organization. In any bit of artwork either from the historical center or from the content, the first things to be seen are the artist’s name, place and time of presence.
+    </h6><br><br>
+    </div>
+    <br><br>
+
+
+<!----SERVICES OFFERED---->
+<section id="services_offered" class="container">
+    <br>
+    <center><h1>Services Offered</h1></center>
+    <hr>
+    <div class="row">
+      <div class="col-sm-4 services-column">
+        <img src="logo1.png" class="img-fluid img-responsive" width="20%">
+        <p>
+        We suggest you to deal with the wall colour combinations, the model, appearance and location of your furniture ,where the decorative items to be placed and make your home look beautiful, spacious and neat.
+
+      </p></div>
+      <div class="col-sm-4 services-column">
+        <img src="logo2.png" class="img-fluid img-responsive" width="20%">
+        <p>
+        We have the images to get a better clarity on how a house should look and when you like the furniture and other items, you can shop your favourite furniture,wall decors, indoor plants and many more from us.
+
+      </p></div>
+      <div class="col-sm-4 services-column">
+        <img src="logo3.png" class="img-fluid img-responsive" width="20%">
+        <p>
+        we have a FAQ's sections where you can clear your doubts and if you are still not satisfied, you can reach out to us by write to us option where our experties will suggest you with the great ideas to implement.
+
+      </p></div>
+  </section><br><br>
+
+
+
+    <center><h3 id = section2 style="font-family:Trebuchet MS;">CONTACT US</h3>
+    <hr>
+    <div class ="contacts">
+      <a href="#" class="fa fa-phone fa-lg"></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="https://mail.google.com" class="fa fa-envelope fa-lg"></a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="https://www.facebook.com" class="fa fa-facebook v"></a>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="https://www.twitter.com" class="fa fa-twitter fa-lg"></a>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="https://www.linkedin.com" class="fa fa-linkedin fa-lg"></a>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="https://www.instagram.com" class="fa fa-instagram fa-lg"></a>    
+    </div></center>
+    <br><br>
+    </p>
+</body>
+</html>
+
+
+<!-- we believe art can make this world a better place -->

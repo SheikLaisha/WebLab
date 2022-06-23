@@ -1,4 +1,4 @@
-<!-- 3.d.Write a JavaScript method that reverts the input array -->
+<!-- 3.d.Write a JavaScript method that reverts the input array
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,9 @@
         {
             a[i]=prompt("Enter the element "+(i+1));
         }
-        document.write(a );       
+        document.write(a );   
+        
+        
         var temp,start=0,end=size;
         while(start<end)
         {
@@ -30,3 +32,51 @@
    </script> 
 </body>
 </html>
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <script>
+        
+        let fun=(n) => {
+            let sum=0;
+            while(n!=0)
+            {
+                let p=n%10;
+                sum=sum*10+p;
+                n=parseInt(n/10);
+            }
+            return sum;
+        }
+//  const reversestr =(str) =>{
+//     if(!str || 2>str.length)
+//     {
+//         return str
+//     }
+//     let reversedstr = '';
+//     for(let index=str.length-1;index>=0;index--)
+//     {
+//         reversedstr=reversedstr + str[index];
+//     }
+//     return reversedstr
+//  }
+
+
+        var a=prompt("Enter number");
+        // for(var i=0;i<size;i++)
+        // {
+        //     a[i]=prompt("Enter the element "+(i+1));
+        // }
+        document.write(fun(a) );   
+
+    </script>
+ </body>
+ </html>

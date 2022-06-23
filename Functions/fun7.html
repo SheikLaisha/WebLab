@@ -1,5 +1,5 @@
 <!-- 7.Write a JavaScript code to print all the Disarium numbers between 1 and 100. -->
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +11,7 @@
 <body>
     <h4>Disarium Numbers</h4>
     <script>
-const isDisarium = num => {
+    const isDisarium = num => {
    const res = String(num)
    .split("")
    .reduce((acc, val, ind) => {
@@ -20,11 +20,48 @@ const isDisarium = num => {
    }, 0);
    return res === num;
 };
+
 for(var i=1;i<=100;i++)
 {
     if(isDisarium(i))
     document.write(i + "<br>");
 }
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Disarium=num => {
+            const res = String(num)
+            .split("")
+            .reduce((a,val,ind) => {
+                a=a+Math.pow(+val,ind+1);
+                return a;
+            },0);
+            return res ==num;
+        };
+
+        var a=[];
+        var p=prompt("enter the minimum range");
+        var q=prompt("enter the maximum range");
+        for(var i=p;i<=q;i++)
+        {
+            if(Disarium(i))
+            document.write(i+"<br>");
+        }
+
     </script>
 </body>
 </html>

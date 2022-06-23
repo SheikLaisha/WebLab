@@ -1,5 +1,5 @@
 <!-- 2.Write an arrow function that accepts an array of numbers as input and returns the sum of the even numbers in the array.  -->
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +26,40 @@
         return sum;
     }
     document.write(add(arr));
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const sumEvents=(a) => {
+            for(var i=0;i<size;i++)
+            {
+                if(a[i]%2==0)
+                {
+                    sum=sum+a[i];
+                }
+            }
+            return sum;
+        }
+        var a=[];
+        var sum=0;
+        var size=Number(prompt("enter size"));
+        for(var i=0;i<size;i++)
+        {
+            a[i]=Number(prompt("enter elemenst"));
+        }
+        document.write(sumEvents(a));
     </script>
 </body>
 </html>
